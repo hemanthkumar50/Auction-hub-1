@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+     margin:0;
+     padding:0;
+     box-sizing: border-box;
+     text-decoration: none;
+    
+    }
+    body{
+        background: rgb(14, 87, 83);
+       
+    }
+ 
+    .max-width{
+        max-width: 1300px;
+        padding: 0 80px;
+        margin: auto;
+    }
+  
+    nav{
+        position: relative;
+        top:-35px;
+        line-height: 100px;
+        border-radius: 35px;
+        position: fixed;
+        width:100%;
+        background: rgb(24, 143, 151);
+        animation: nav 2s ease-in-out;
+        z-index: 100;
+    }
+
+@keyframes nav{
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+    .navbar .max-width{
+        position: relative;
+        top:20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar .logo a{
+        color:white;
+        font-size: 45px;
+        font-weight: 900;
+    }
+    .navbar .logo a:hover{
+        color:black;
+    }
+    .navbar .menu li a:hover{
+       background-color:rgb(14, 87, 83);
+    }
+
+    .navbar .menu li {
+        list-style:none;
+        display: inline-block;
+    }
+
+    .navbar .menu li a{
+        border-radius: 20px;
+        padding: 5px 7px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+    }
+    .navbar .btns a{
+      border:2px solid rgb(231, 223, 223);
+      color: #fff;
+       position: relative;
+       left: 50px;
+       padding: 10px 20px;
+       font-size: 20px;
+       font-weight: 700;
+       background-color: black;
+       border-radius: 30px;
+      
+    }
+
+    .navbar .btns a:hover{
+      
+      border:2px solid black;
+       color: #130e0e;
+       background-color: rgb(213, 217, 221);
+     
+    }
+   
+   .logo img{
+    position: relative;
+    right: 25px;
+    top:16px;
+    border-radius: 80%;
+    height: 57px;
+    width: 60px;
+   }
+
+   .logo span{  
+     font-size:45px;
+     font-weight: 900;
+   }
+.navbar .toggle-btn{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display:none ;
+}
+
+
+.down-bar{
+  display: none;
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  background:rgba(24, 142, 151, 0.582);
+  /* right: 2rem; */
+  top: 100px;
+}
+.menu-down li {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 30px;
+font-weight: 800;
+color: white;
+}
+.menu-down li a {
+  
+
+font-size: 30px;
+font-weight: 800;
+color: white;
+}
+
+@media (max-width:840px) {
+
+.menu{
+  display: none;
+}
+.navbar .toggle-btn{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+}
+
+
+.template img {
+   transform: rotateY(180deg);
+}
+.navbar .logo a{
+        color:white;
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .logo span{  
+     font-size:35px;
+     font-weight: 600;
+   }
+   
+   .logo img{
+    height: 47px;
+    width: 50px;
+   }
+   .navbar .toggle-btn{
+  position: relative;
+  left: 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  
+}
+
+
+}
+
+
+   /* product style */
+ 
+            .product{
+              position: relative;
+              top:50px;
+              
+            }
+            
+            .product .title{
+             padding: 20px ;
+             color: white;
+             position: relative;
+             font-size: 60px;
+             font-weight: 600;
+             text-align: center;
+             margin:10px 0px;
+            
+            
+            }
+            
+            .product .product-content{ 
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+            
+            }
+            .product .product-content .left .product-content{
+              border: 3px solid white;
+              border-radius: 30px;
+              align-items: center;
+             
+              height: 69vh;
+              width: 65vh;
+              object-fit: cover;
+              
+            }
+            .product .product-content .left .product-content:hover{
+              border: 3px solid rgb(243, 12, 224);
+            }
+            
+            .product .product-content .right{
+           
+             color: white;
+             width:50%;
+            }
+            .product .product-content .right .text{
+             margin: 10px 0px;
+             
+             font-size:35px;
+             font-weight: 600;
+             color: blue;
+            }
+            /* .product .product-content .right .text span{
+                 border-radius: 30px;
+             color: red;
+            } */
+            
+            .product .product-content .right h4 {
+             border: 3px solid white;
+             background:rgb(24, 143, 151);
+             border-radius: 30px;
+              
+            }
+            .product .product-content .right h4:hover {
+             border: 3px solid rgb(243, 8, 153);
+             background:rgb(3, 3, 3);
+             
+            
+           
+             
+            }
+            .product .product-content .right h4  p{
+             padding: 10px 25px;
+             font-size:27px;
+             color: rgb(218, 196, 196);
+             
+             
+            }
+            .product .product-content .right h4  p a{
+              position: relative;
+              top:50px;
+             
+            }
+            .product .product-content .right a{
+             display:inline-block;
+             align-items: space-between;
+             padding: 5px 5px;
+             margin: 20px 20px;
+             background:rgb(24, 143, 151);
+             color: white;
+             font-weight: 400;
+             font-size: 25px;
+             border-radius: 6px;
+             border:2px solid rgb(233, 233, 243);
+             transition: all 0.3s ease;
+            }
+            .product .product-content .right a:hover{
+             color:rgb(217, 217, 230);
+             background:rgb(3, 3, 3);
+            }
+            .product-content{
+             display: flex;
+             margin: 0px;
+             padding: 0px;
+            }
+            /* product responsive */
+             @media(max-width:1096px){
+             .product .product-content .right{
+                width: 100%;
+             }
+            }
+            @media(max-width:1096px){
+             .product .product-content .left .product-content{
+               width: 95%;
+               height: 90%;
+             }
+             .product .title{
+               
+              font-size: 30px;
+              font-weight: 600;   
+             }
+            } 
+            @media (max-width:417px){
+              .product .product-content .right a{
+                font-size: 15px;
+                font-weight: 300;
+              }
+              .product .max-width h2{
+                font-size: 40px;
+                font-weight: 500;
+               }   
+               .product .product-content .right .text{
+              
+                font-size:24px;
+                font-weight: 300;
+               }
+               .product .product-content .right .text span{
+                font-size: 28px;
+               }
+               .product .product-content .right p{
+                font-size:18px;
+                
+                
+               }
+            }
+            
+            @media (max-width:291px){
+              .product .title{
+               
+                font-size: 30px;
+                font-weight: 600;   
+               }
+            }
+            
+    .container{
+      
+        position: relative;
+        top:200px;
+        height: 700px;
+        width: 100%;
+        /* background-color: rgb(22, 236, 236); */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box{
+          background: url("https://t4.ftcdn.net/jpg/05/51/96/35/360_F_551963598_53hrJ2UXDoC00XhkqJ8lKN8Xa2EQg4no.jpg") no-repeat;
+          
+        border-radius: 30px;
+        margin: 20px 30px;
+        height: 250px;
+        width: 350px;
+        box-shadow: 10px 20px 10px rgb(12, 13, 14);
+        background-color: rgb(22, 105, 105);
+    }
+    .box .head {
+        position: relative;
+        top:30px;
+       
+    }
+    .box .head h1{
+        display: flex;
+        justify-content: center;
+        padding: 10px 10px;
+        font-size: 48px;
+        font-weight: 800;
+        color:rgb(44, 187, 177);  
+    }
+    .box .head h2{
+        display: flex;
+        justify-content: center;
+        padding: 10px 10px;
+        font-size: 68px;
+        font-weight: 800;
+        color: beige;  
+    }
+    .box .head h3{
+        display: flex;
+        justify-content: center;
+        padding: 10px 10px;
+        font-size: 18px;
+        font-weight: 800;
+        color: beige;  
+    }
+    .img{
+        display: flex;
+        flex-wrap:wrap;
+        position: relative;
+        top:130px;
+      
+
+       
+       
+    }
+    
+    .pro img{
+        position: relative;
+        left: 50px;
+        height: 450px;
+        width: 450px;
+        border-radius: 80%;
+    }
+    .content h1{
+       padding-top: 50px;
+        position:relative;
+        top:10px;
+        left: 100px;
+        color: rgb(22, 124, 214);
+        font-size: 50px;
+    }
+</style>
+<body>
+  <nav class="navbar">
+    <div class="max-width">
+        <div class="logo"><img src="../images/logo.png"></img><a href="#">Auction <span>Hub</span></a></div>
+        
+               <ul class="menu">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="stats.html">Stats</a>
+              </li>
+              <li>
+                <a href="productshowcase.html">Products</a>
+              </li>
+              <li>
+                <a href="#">Help</a>
+              </li>
+              <btn class="btns">
+                <a href="update.html">Update</a>
+              </btn>
+             
+           </ul>
+           <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+           </div>
+
+    </div>
+    <div class="down-bar">
+      <ul class="menu-down">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="#">Profile</a>
+          </li>
+          <li>
+            <a href="profile.html">Settings</a>
+          </li>
+          <li>
+            <a href="#">Help</a>
+          </li>
+         
+       </ul>
+    </div>
+    <script>
+      const toggleBtn = document.querySelector('.toggle-btn')
+      const toggleBtnIcon = document.querySelector('.toggle-btn i')
+      const downBar = document.querySelector('.down-bar')
+
+      toggleBtn.onclick = function() {
+        downBar.classList.toggle('open')
+        const isOpen = downBar.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+      }
+    </script>
+    
+</nav>
+    <section class="product">
+        <div class="max-width"> 
+         <h2 class="title">Stats</h2>
+         <div class="product-content">
+           <div class="column left">
+             <img class="product-content" src="../images/Hem.jpeg" alt="">
+           </div> 
+           <div class="column right">
+             <div class="text">
+                <a href="#">Profile</a>
+                <a href="">Timing</a></div>
+             <h4> <p>Name : Hemanth kumar H</p>
+                  <p>Who is He ? : Expert</p>  
+                 <p>About:Auction house specialists appraise, research, catalog, and market . The specialist has a deep understanding of, and a great deal of interest in, the type of art they're responsible for. They work with clients on all aspects of the auction process.</p></h4>
+                <!-- <a href="#">Join</a> -->
+            
+             <script src= "script.js"></script>  
+            </div>
+          </div>
+        </div>
+        </div>
+        </section>
+  
+       
+                  
+         
+  
+
+    <div class="container">
+       
+       <div class="box">
+        <div class="head">
+            <h1>Total auction</h1>
+            <h2>60</h2>
+            <!-- <h3>Lets participate more</h3> -->
+        </div>
+
+       </div> 
+
+       <div class="box">
+        <div class="head">
+            <h1>Wins</h1>
+            <h2>20</h2>
+            <!-- <h3>Congrats for the buy</h3> -->
+        </div>
+       </div> 
+
+
+       <div class="box">
+        <div class="head">
+            <h1>Lost</h1>
+            <h2>14</h2>
+            <!-- <h3>Better luck next time</h3> -->
+        </div>
+       </div> 
+
+       <div class="box">
+        <div class="head">
+            <h1>Achievements</h1>
+            <h2>20</h2>
+            <!-- <h3>Lets participate more</h3> -->
+        </div>
+       </div> 
+       <div class="box">
+        <div class="head">
+            <h1>Highest bid</h1>
+            <h2>20</h2>
+            <!-- <h3>Lets participate more</h3> -->
+        </div>
+       </div> 
+       <div class="box">
+        <div class="head">
+            <h1>Lowest bid</h1>
+            <h2>20</h2>
+            <!-- <h3>Lets participate more</h3> -->
+        </div>
+       </div> 
+
+     
+      
+    </div>
+</body>
+</html>

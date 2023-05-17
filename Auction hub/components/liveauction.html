@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+       
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+
+    }
+    body{
+        background: rgb(14, 87, 83);
+          
+    }
+    .max-width{
+        max-width: 1300px;
+        padding: 0 80px;
+        margin: auto;
+    }
+  
+    nav{
+        position: relative;
+        top:-35px;
+        line-height: 100px;
+        border-radius: 35px;
+        position: fixed;
+        width:100%;
+        background: rgb(24, 143, 151);
+        animation: nav 2s ease-in-out;
+        z-index: 100;
+    }
+
+@keyframes nav{
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+    .navbar .max-width{
+        position: relative;
+        top:20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar .logo a{
+        color:white;
+        font-size: 45px;
+        font-weight: 900;
+    }
+    .navbar .logo a:hover{
+        color:black;
+    }
+    .navbar .menu li a:hover{
+       background-color:rgb(14, 87, 83);
+    }
+    .navbar .menu li {
+        list-style:none;
+        display: inline-block;
+    }
+
+    .navbar .menu li a{
+        border-radius: 20px;
+        padding: 5px 7px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+    }
+   
+   .logo img{
+    position: relative;
+    right: 25px;
+    top:16px;
+    border-radius: 80%;
+    height: 57px;
+    width: 60px;
+   }
+
+   .logo span{  
+     font-size:45px;
+     font-weight: 900;
+   }
+.navbar .toggle-btn{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display:none ;
+}
+
+
+.down-bar{
+  display: none;
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  background:rgba(24, 142, 151, 0.582);
+  /* right: 2rem; */
+  top: 100px;
+}
+.menu-down li {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 30px;
+font-weight: 800;
+color: white;
+}
+.menu-down li a {
+  
+
+font-size: 30px;
+font-weight: 800;
+color: white;
+}
+
+@media (max-width:840px) {
+
+.menu{
+  display: none;
+}
+.navbar .toggle-btn{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+}
+
+
+.template img {
+   transform: rotateY(180deg);
+}
+.navbar .logo a{
+        color:white;
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .logo span{  
+     font-size:35px;
+     font-weight: 600;
+   }
+   
+   .logo img{
+    height: 47px;
+    width: 50px;
+   }
+   .navbar .toggle-btn{
+  position: relative;
+  left: 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  
+}
+
+
+}
+
+
+
+    /* auction styling */
+ 
+            .product{
+              position: relative;
+              top:30px;
+            }
+
+            
+            .product .title{
+             padding: 10px ;
+             color: white;
+             position: relative;
+             font-size: 40px;
+             font-weight: 600;
+             text-align: center;
+             margin:10px 0px;
+            
+            
+            }
+            
+            .product .product-content{ 
+            margin: 30px 0px;
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            }
+            
+
+            .product .product-content .left .product-content{
+              border: 3px solid white;
+              border-radius: 80%;
+              align-items: center;
+              margin: 10px 10px;
+              height: 42vh;
+              width: 45vh;
+              object-fit: cover;
+              
+            }
+            .product .product-content .left .product-content:hover{
+              border: 3px solid rgb(24, 143, 151);
+            }
+            
+            .product .product-content .right{
+           
+             color: white;
+             width:50%;
+            }
+            .product .product-content .right .text{
+             margin: 10px 0px;
+             font-size:35px;
+             font-weight: 600;
+             color: rgb(21, 219, 219);
+            }
+            /* .product .product-content .right .text span{
+                 border-radius: 30px;
+             color: red;
+            } */
+            
+            .product .product-content .right h4 {
+                padding: 30px 0px;
+             border: 3px solid white;
+             background:rgb(24, 143, 151);
+             border-radius: 30px;
+              
+            }
+            .product .product-content .right h4:hover {
+             border: 3px solid rgb(243, 8, 153);
+             background:none;
+             
+            
+           
+             
+            }
+            .product .product-content .right h4  p{
+             padding: 10px 25px;
+             font-size:27px;
+             color: rgb(218, 196, 196);
+             
+             
+            }
+            .product .product-content .right h4  p a{
+              position: relative;
+              top:50px;
+             
+            }
+            .product .product-content .right a{
+             display:inline-block;
+             align-items: space-between;
+             padding: 5px 5px;
+             margin: 20px 20px;
+             background:rgb(24, 143, 151);
+             color: white;
+             font-weight: 400;
+             font-size: 25px;
+             border-radius: 6px;
+             border:2px solid rgb(233, 233, 243);
+             transition: all 0.3s ease;
+            }
+            .product .product-content .right a:hover{
+             color:rgb(217, 217, 230);
+             background:rgb(3, 3, 3);
+            }
+            .product-content{
+             display: flex;
+             margin: 0px;
+             padding: 0px;
+            }
+
+    .proof{
+      background:rgba(3, 6, 7, 0.726);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+
+  }
+  .proof:hover{
+    background:rgba(43, 201, 212, 0.726);
+   
+
+  }
+  .proof img{
+   border-radius: 80%;
+   border:  3px solid rgb(224, 206, 206);
+   height:40vh;
+   width: 40vh;
+
+  }
+/* top-3 */
+ 
+          .top h1{
+            display: flex;
+             justify-content: center;
+             align-items: center;   
+             padding: 10px 10px;
+             color: rgb(27, 144, 190);
+             font-weight: 400;
+             font-size: 25px;
+
+            }
+            .top-1 h2{
+             display: flex;
+             justify-content: center;
+             align-items: center;   
+             padding: 10px 10px;
+             color: rgb(209, 191, 191);
+             font-weight: 900;
+             font-size: 45px;
+            
+
+            }
+            .top-2 h2{
+            
+             padding: 10px 10px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             color: rgb(218, 204, 204);
+             font-weight: 900;
+             font-size: 45px;
+            
+
+            }
+            .top-3 h2{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             padding: 10px 10px;
+             color: rgb(218, 204, 204);
+             font-weight: 900;
+             font-size: 45px;
+            
+
+            }
+
+
+
+        /* product responsive */
+             @media(max-width:1050px){
+             .product .product-content .right{
+                width: 100%;
+             }
+            }
+            @media(max-width:1050px){
+             .product .product-content .left .product-content{
+               width: 95%;
+               height: 90%;
+             }
+             .product .title{
+               
+              font-size: 30px;
+              font-weight: 600;   
+             }
+            } 
+            @media (max-width:417px){
+              .product .product-content .right a{
+                font-size: 15px;
+                font-weight: 300;
+              }
+              .product .max-width h2{
+                font-size: 40px;
+                font-weight: 500;
+               }   
+               .product .product-content .right .text{
+              
+                font-size:24px;
+                font-weight: 300;
+               }
+               .product .product-content .right .text span{
+                font-size: 28px;
+               }
+               .product .product-content .right p{
+                font-size:18px;
+                
+                
+               }
+            }
+            
+            @media (max-width:291px){
+              .product .title{
+               
+                font-size: 30px;
+                font-weight: 600;   
+               }
+            }
+            
+           
+
+      section{
+               background:rgb(14, 87, 83);
+               padding: 55px 50px;
+               /* position: relative;
+               top:40px; */
+              
+             }
+             
+             ::-webkit-scrollbar{
+              display:none;
+             }
+
+            
+            
+            .bidder .title{
+             padding: 10px ;
+             color: white;
+             position: relative;
+             font-size: 40px;
+             font-weight: 600;
+             text-align: center;
+             margin:10px 0px;
+            
+            
+            }
+            
+            .bidder .product-content{ 
+
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+            
+            }
+            
+
+            .bidder .product-content .left .product-content{
+            
+              border: 3px solid white;
+              border-radius: 80%;
+              align-items: center;
+              margin: 10px 10px;
+              height: 52vh;
+              width: 55vh;
+              object-fit: cover;
+              
+            }
+            .bidder .product-content .left {
+            padding: 30px 30px;
+            border-radius: 80%;
+            background:rgb(24, 143, 151);
+            
+          }
+            .bidder .product-content .left .product-content:hover{
+              border: 3px solid rgb(24, 143, 151);
+            }
+            
+            .bidder .product-content .right{
+            
+             color: white;
+             width:50%;
+            }
+            .bidder .product-content .right .text{
+              
+             margin: 10px 0px;
+             font-size:35px;
+             font-weight: 600;
+             color: rgb(18, 125, 158);
+            }
+            /* .product .product-content .right .text span{
+                 border-radius: 30px;
+             color: red;
+            } */
+            
+            .bidder .product-content .right h4 {
+                margin-left: -130px;
+                background:rgb(24, 143, 151);
+                padding: 0px 90px;
+             /* border: 3px solid white; */
+             /* background:rgb(24, 143, 151); */
+                border-radius: 30px;
+              
+            }
+            /* .bidder .product-content .right h4:hover {
+             border: 3px solid rgb(243, 8, 153);
+             background:rgb(3, 3, 3);
+             
+            
+           
+             
+            } */
+            .bidder .product-content .right h4  p{
+             padding: 30px 25px;
+             font-size:27px;
+             color: rgb(218, 196, 196);
+             
+             
+            }
+            .bidder .product-content .right h4  p a{
+              position: relative;
+              top:50px;
+             
+            }
+            .bidder .product-content .right a{
+             display:inline-block;
+             align-items: space-between;
+             padding: 5px 5px;
+             margin: 20px 20px;
+             background:rgb(24, 143, 151);
+             color: white;
+             font-weight: 400;
+             font-size: 25px;
+             border-radius: 6px;
+             border:2px solid rgb(233, 233, 243);
+             transition: all 0.3s ease;
+            }
+            .bidder .product-content .right a:hover{
+             color:rgb(217, 217, 230);
+             background:rgb(3, 3, 3);
+            }
+            .product-content{
+             display: flex;
+             margin: 0px;
+             padding: 0px;
+            }
+
+
+/* top names */
+
+      .slot{
+          /* height: 700px; */
+                                
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+      }
+      .slot .team{
+        
+          border-radius:30px;
+          width: 500px;
+          height: 230px;
+          margin: 10px 10px;
+          padding: 15px 20px;
+          background:rgb(9, 194, 169);
+          background: cover;
+      }
+      .slot .team marquee{
+          padding: 10px 5px;
+          font-size: 34px;
+          font-weight: 900;
+          color:rgb(14, 87, 83);
+          
+      }
+      .slot .team marquee:hover{
+          color: rgb(209, 200, 200);
+          
+      }
+      .slot .team h1{
+          padding: 10px 5px;
+          font-size: 30px;
+          font-weight: 900;
+          color: rgb(20, 231, 231);
+          
+      }
+      .slot .team h1:hover{
+          color: rgb(62, 231, 20);
+          
+      }
+      .slot .team p{
+          /* display: flex;
+          justify-content: center; */
+          background:rgb(14, 87, 83);
+          padding: 10px 5px;
+          font-size: 25px;
+          font-weight: 900;
+          color: rgb(242, 235, 243);
+          
+      }
+     
+
+
+
+</style>
+<body>
+  <nav class="navbar">
+    <div class="max-width">
+        <div class="logo"><img src="Logo.png"></img><a href="#">Auction <span>Hub</span></a></div>
+        
+               <ul class="menu">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="profile.html">Settings</a>
+              </li>
+              <li>
+                <a href="#">Help</a>
+              </li>
+             
+           </ul>
+           <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+           </div>
+
+    </div>
+    <div class="down-bar">
+      <ul class="menu-down">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="#">Profile</a>
+          </li>
+          <li>
+            <a href="profile.html">Settings</a>
+          </li>
+          <li>
+            <a href="#">Help</a>
+          </li>
+         
+       </ul>
+    </div>
+    <script>
+      const toggleBtn = document.querySelector('.toggle-btn')
+      const toggleBtnIcon = document.querySelector('.toggle-btn i')
+      const downBar = document.querySelector('.down-bar')
+
+      toggleBtn.onclick = function() {
+        downBar.classList.toggle('open')
+        const isOpen = downBar.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+      }
+    </script>
+    
+</nav>
+  
+    
+    
+    
+
+
+
+
+      <section class="product">
+        
+        <div class="max-width"> 
+         <!-- <h2 class="title">Auction Hoster</h2> -->
+         <div class="proof">
+            <img src="https://i.pinimg.com/736x/93/a2/aa/93a2aa8955615737c2918db7a0621d90.jpg">
+           
+        </div>
+         <div class="product-content">
+           <div class="column left">
+             <img class="product-content" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPd96muJ0ByDsf43bIHDwc2Tj639cme0DDmahJhhtBwB4gpl1QbAu2kI00cTAmjwUsVBCLcDnYKrc&usqp=CAU&ec=48600113" alt="">
+           </div> 
+           <div class="column right">
+             <div class="text">
+                <!-- <a href="#">Profile</a>
+                <a href="">Live viewers</a></div> -->
+             <h4> <p>product name :</p>
+                  <p>Base price :</p>  
+                 <p>About this product :</p></h4>
+                <!-- <a href="#">Join auction</a> -->
+            
+            
+            </div>
+          </div>
+        </div>
+        </div>
+        </section>
+        
+
+
+
+        <div class="slot">
+          <div class="team">
+             <marquee direction="right">Top three bidders</marquee>
+             <p>1. Virat Kholi Bid Rs : 5000</p>
+             <p>2. Mahindra Sing Dhoni Bid Rs : 4000</p>
+             <p>3. Rohit Sharma Bid Rs : 2000</p>
+          </div>
+      </div>    
+    
+
+
+
+
+      <section class="bidder">
+        
+        <div class="max-width"> 
+         <h2 class="title">Bidder-1</h2>
+         <div class="product-content">
+           <div class="column left">
+             <img class="product-content" src="https://www.mykhel.com/thumb/247x100x233/cricket/players/8/3788.jpg" alt="">
+           </div> 
+           <div class="column right">
+             <div class="text">
+                <!-- <a href="#">Profile</a>
+                <a href="">Live viewers</a></div> -->
+                <h4> <p> Name :</p>
+                    <p> won   lost:</p>  
+              </h4>
+                <!-- <a href="#">Join auction</a> -->
+            
+           
+            </div>
+          </div>
+        </div>
+        </div>
+        </section>
+
+        <section class="bidder">
+        
+            <div class="max-width"> 
+             <h2 class="title">Bidder-2</h2>
+             <div class="product-content">
+               <div class="column left">
+                 <img class="product-content" src="data:image/jpeg;base64,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" alt="">
+               </div> 
+               <div class="column right">
+                 <div class="text">
+                    <!-- <a href="#">Profile</a>
+                    <a href="">Live viewers</a></div> -->
+                    <h4> <p> Name :</p>
+                        <p> won   lost:</p>  
+                  </h4>
+                    <!-- <a href="#">Join auction</a> -->
+                
+               
+                </div>
+              </div>
+            </div>
+            </div>
+            </section>
+            <section class="bidder">
+        
+                <div class="max-width"> 
+                 <h2 class="title">Bidder-3</h2>
+                 <div class="product-content">
+                   <div class="column left">
+                     <img class="product-content" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS61oQA0tbNUz0Rt5JV7-wD9fDCx1QiLCaFTApKY7nTq-7q3xekf6Z92wIgYjVUAdOoYRBGFT5oiF0&usqp=CAU&ec=48600113" alt="">
+                   </div> 
+                   <div class="column right">
+                     <div class="text">
+                        <!-- <a href="#">Profile</a>
+                        <a href="">Live viewers</a></div> -->
+                        <h4> <p> Name :</p>
+                            <p> won   lost:</p>  
+                      </h4>
+                        <!-- <a href="#">Join auction</a> -->
+                    
+                   
+                    </div>
+                  </div>
+                </div>
+                </div>
+                </section>
+                <section class="bidder">
+        
+                    <div class="max-width"> 
+                     <h2 class="title">Bidder-4</h2>
+                     <div class="product-content">
+                       <div class="column left">
+                         <img class="product-content" src="https://opt.toiimg.com/recuperator/img/toi/m-69257289/69257289.jpg" alt="">
+                       </div> 
+                       <div class="column right">
+                         <div class="text">
+                            <!-- <a href="#">Profile</a>
+                            <a href="">Live viewers</a></div> -->
+                         <h4> <p> Name :</p>
+                              <p> won   lost:</p>  
+                        </h4>
+                            <!-- <a href="#">Join auction</a> -->
+                        
+                       
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    </section>
+
+
+
+</body>
+</html>

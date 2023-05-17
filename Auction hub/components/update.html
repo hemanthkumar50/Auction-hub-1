@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ 
+  
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+
+    }
+    body{
+        background: rgb(14, 87, 83);
+          
+    }
+    .max-width{
+        max-width: 1300px;
+        padding: 0 80px;
+        margin: auto;
+    }
+  
+    nav{
+        position: relative;
+        top:-35px;
+        line-height: 100px;
+        border-radius: 35px;
+        position: fixed;
+        width:100%;
+        background: rgb(24, 143, 151);
+        animation: nav 2s ease-in-out;
+        z-index: 100;
+    }
+
+@keyframes nav{
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+    .navbar .max-width{
+        position: relative;
+        top:20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar .logo a{
+        color:white;
+        font-size: 45px;
+        font-weight: 900;
+    }
+    .navbar .logo a:hover{
+        color:black;
+    }
+    .navbar .menu li a:hover{
+       background-color:rgb(14, 87, 83);
+    }
+    .navbar .menu li {
+        list-style:none;
+        display: inline-block;
+    }
+
+    .navbar .menu li a{
+        border-radius: 20px;
+        padding: 5px 7px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+    }
+   
+   .logo img{
+    position: relative;
+    right: 25px;
+    top:16px;
+    border-radius: 80%;
+    height: 57px;
+    width: 60px;
+   }
+
+   .logo span{  
+     font-size:45px;
+     font-weight: 900;
+   }
+.navbar .toggle-btn{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display:none ;
+}
+
+
+.down-bar{
+  display: none;
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  background:rgba(24, 142, 151, 0.582);
+  /* right: 2rem; */
+  top: 100px;
+}
+.menu-down li {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 30px;
+font-weight: 800;
+color: white;
+}
+.menu-down li a {
+  
+
+font-size: 30px;
+font-weight: 800;
+color: white;
+}
+
+@media (max-width:840px) {
+
+.menu{
+  display: none;
+}
+.navbar .toggle-btn{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+}
+
+
+.template img {
+   transform: rotateY(180deg);
+}
+.navbar .logo a{
+        color:white;
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .logo span{  
+     font-size:35px;
+     font-weight: 600;
+   }
+   
+   .logo img{
+    height: 47px;
+    width: 50px;
+   }
+   .navbar .toggle-btn{
+  position: relative;
+  left: 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  
+}
+
+
+}
+
+
+
+
+    /* plate */
+    .product{
+      position: relative;
+      top:100px;
+    
+    }
+     .product .title{
+             padding: 20px ;
+             color: white;
+             position: relative;
+             font-size: 60px;
+             font-weight: 600;
+             text-align: center;
+             margin:10px 0px;
+            
+            
+            }
+            
+            .product .product-content{ 
+           
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+            
+            }
+            .product .product-content .left .product-content{
+              border: 3px solid white;
+              border-radius: 80%;
+              align-items: center;
+              margin: 15px 20px;
+              height: 69vh;
+              width: 69vh;
+              object-fit: cover;
+              
+            }
+            .product .product-content .left .product-content:hover{
+              border: 3px solid rgb(243, 12, 224);
+            }
+            
+            .product .product-content .right{
+             /* position: relative;
+             left:-40px;  */
+             border-radius: 30px;
+             /* background-color: aqua; */
+             color: white;
+             width:50%;
+            }
+            .product .product-content .right .text{
+             margin: 30px 60px;
+             display: flex;
+             flex-direction: column;
+           
+            }
+           .text label{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgb(230, 223, 223);
+           }
+           .text input{
+            color: rgb(25, 209, 209);
+            font-size: 25px;
+            font-weight: 700;
+            position: relative;
+            left: 20px;
+            background-color: rgb(14, 87, 83);
+            border: none;
+            outline: none;
+            border-bottom: 3px solid rgb(212, 203, 203);
+           }
+            /* .product .product-content .right .text span{
+                 border-radius: 30px;
+             color: red;
+            } */
+            
+            /* .product .product-content .right h4 {
+             border: 3px solid white;
+             background:rgb(24, 143, 151);
+             border-radius: 30px;
+              
+            }
+            .product .product-content .right h4:hover {
+             border: 3px solid rgb(243, 8, 153);
+             background:rgb(3, 3, 3);
+             
+            
+           
+             
+            }
+            .product .product-content .right h4  p{
+             padding: 10px 25px;
+             font-size:27px;
+             color: rgb(218, 196, 196);
+             
+             
+            }
+            .product .product-content .right h4  p a{
+              position: relative;
+              top:50px;
+             
+            }
+            .product .product-content .right a{
+             display:inline-block;
+             align-items: space-between;
+             padding: 5px 5px;
+             margin: 20px 20px;
+             background:rgb(24, 143, 151);
+             color: white;
+             font-weight: 400;
+             font-size: 25px;
+             border-radius: 6px;
+             border:2px solid rgb(233, 233, 243);
+             transition: all 0.3s ease;
+            }
+            .product .product-content .right a:hover{
+             color:rgb(217, 217, 230);
+             background:rgb(3, 3, 3);
+            }
+            .product-content{
+             display: flex;
+             margin: 0px;
+             padding: 0px;
+            } */
+            /* product responsive */
+             @media(max-width:1096px){
+             .product .product-content .right{
+                width: 100%;
+             }
+            }
+            @media(max-width:1096px){
+             .product .product-content .left .product-content{
+               width: 95%;
+               height: 90%;
+             }
+             .product .title{
+               
+              font-size: 30px;
+              font-weight: 600;   
+             }
+            } 
+            @media (max-width:417px){
+              .product .product-content .right a{
+                font-size: 15px;
+                font-weight: 300;
+              }
+              .product .max-width h2{
+                font-size: 40px;
+                font-weight: 500;
+               }   
+               .product .product-content .right .text{
+              
+                font-size:24px;
+                font-weight: 300;
+               }
+               .product .product-content .right .text span{
+                font-size: 28px;
+               }
+               .product .product-content .right p{
+                font-size:18px;
+                
+                
+               }
+            }
+            
+            @media (max-width:291px){
+              .product .title{
+               
+                font-size: 30px;
+                font-weight: 600;   
+               }
+            }
+            
+            
+            .upload input{
+    display: none;
+   
+}    
+
+.upload label{
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  left: 200px;
+  top:400px;
+}
+.btn{
+  position: relative;
+  bottom: 40px;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  }
+  .btn  a{
+  font-size: 20px;
+  font-weight: 900;
+  padding: 10px 10px;
+  background: rgb(0, 255, 170);
+  border:  3px solid white; 
+  border-radius: 30px;
+  }
+  .btn  a:hover{
+  color: aliceblue;
+  padding: 13px 13px;
+  background: rgba(0, 17, 255, 0.829);
+  border:  3px solid rgb(0, 255, 170); 
+
+  }
+    
+</style>
+<body>
+ 
+  <nav class="navbar">
+    <div class="max-width">
+        <div class="logo"><img src="Logo.png"></img><a href="#">Auction <span>Hub</span></a></div>
+        
+               <ul class="menu">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Stats</a>
+              </li>
+              <li>
+                <a href="#">Products</a>
+              </li>
+              <li>
+                <a href="#">Help</a>
+              </li>
+             
+           </ul>
+           <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+           </div>
+
+    </div>
+    <div class="down-bar">
+      <ul class="menu-down">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="#">Profile</a>
+          </li>
+          <li>
+            <a href="profile.html">Settings</a>
+          </li>
+          <li>
+            <a href="#">Help</a>
+          </li>
+          
+       </ul>
+    </div>
+    <script>
+      const toggleBtn = document.querySelector('.toggle-btn')
+      const toggleBtnIcon = document.querySelector('.toggle-btn i')
+      const downBar = document.querySelector('.down-bar')
+
+      toggleBtn.onclick = function() {
+        downBar.classList.toggle('open')
+        const isOpen = downBar.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+      }
+    </script>
+    
+</nav>
+    <section class="product">
+        <div class="max-width"> 
+         <!-- <h2 class="title">Update</h2> -->
+      
+         <div class="product-content">
+           <div class="column left">
+            <div class="upload">
+              <input type="file"  accept="image/jpeg,image/png,image/jpg" id="input-file">
+              <label for="input-file">Upload image</label>
+            </div>
+             <img class="product-content" src="https://www.citypng.com/public/uploads/preview/hd-man-user-illustration-icon-transparent-png-11640168385tqosatnrny.png" alt="" id="profile-pic">
+           </div> 
+           <div class="column right">
+             <div class="text">
+              
+                        <label>Name</label>
+                        <input type = "text" class = "ip" />
+                   
+                
+                    <label>About User</label>
+                    <input type = "text" class = "ip2" />
+                 
+                  
+                        <label>Email Id</label>
+                        <input type = "text" class = "ip3"/>
+                   
+                        <label>phone No</label>
+                         <input type = "number" class = "ip4"  maxlength="10" />
+                    
+            
+            
+             </div>
+          </div>
+        </div>
+        </div>
+        <div class="btn">
+          <a href="#">Update</a>
+        </div>
+        </section>
+       
+    
+     
+    
+</body>
+<script>
+  let profilePic = document.getElementById("profile-pic");
+  let inputFile = document.getElementById("input-file");
+  
+    inputFile.onchange = function(){
+    profilePic.src = URL.createObjectURL(inputFile.files[0]);
+  }
+ 
+</script> 
+
+<script>
+    
+    var ip = document.querySelector(".ip")
+    var btn = document.querySelector(".btn")
+    var n = document.querySelector(".name")
+    
+
+    
+    function c() {
+        n.innerHTML = ip.value
+    } 
+    
+    // btn.addEventListener("click", c())
+    
+
+</script>
+
+</html>

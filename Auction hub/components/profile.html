@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<style>
+@import url(‘https://fonts.googleapis.com/css2?family=Open+Sans&display=swap’);
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: ‘Open Sans’, sans-serif;
+}
+body{
+	background:rgb(14, 87, 83);
+}
+
+
+ 
+    .max-width{
+        max-width: 1300px;
+        padding: 0 80px;
+        margin: auto;
+    }
+  
+    .navbar{
+        position: relative;
+        top:-35px;
+        line-height: 100px;
+        border-radius: 35px;
+        position: fixed;
+        width:100%;
+        background: rgb(24, 143, 151);
+        z-index: 100;
+    }
+    .navbar .max-width{
+        position: relative;
+        top:20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar .logo a{
+        color:white;
+        font-size: 45px;
+        font-weight: 900;
+    }
+    .navbar .logo a:hover{
+        color:black;
+    }
+    .navbar .menu li a:hover{
+       background-color:rgb(14, 87, 83);
+    }
+    .navbar .menu li {
+        list-style:none;
+        display: inline-block;
+    }
+
+    .navbar .menu li a{
+        border-radius: 20px;
+        padding: 5px 7px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+    }
+   
+   .logo img{
+    position: relative;
+    right: 25px;
+    top:20px;
+    border-radius: 80%;
+    height: 57px;
+    width: 55px;
+   }
+
+   .logo span{
+     font-size:45px;
+     font-weight: 900;
+   }
+
+   /* box-styling */
+    .column{
+      display: flex;
+      justify-content: center;
+       position: relative;
+       top:200px;
+       display: flex;
+       flex-wrap: wrap;
+       
+       
+    }
+    .column .box{
+        margin: 9px 9px;
+        border-radius: 10px;
+        border: 2px solid white;
+        padding: 10px 14px;
+        background-color: rgb(20, 192, 192);
+        width: 45%;
+        height: 200px;
+    }
+
+    .column .box:hover{
+       
+        border: 2px solid rgb(28, 185, 185);
+      
+        background:whitesmoke;
+     
+    }
+
+        
+    /* .column .box{
+      position: relative;
+      left: 100px;
+      width: 55%;
+      
+    } */
+
+          
+            
+/* ---------- bars ---------- */
+
+.main-container {
+  position: relative;
+  top:900px;
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.card:first-child {
+  background-color: #2962ff;
+}
+
+.card:nth-child(2) {
+  background-color: #ff6d00;
+}
+
+.card:nth-child(3) {
+  background-color: #2e7d32;
+}
+
+.card:nth-child(4) {
+  background-color: #d50000;
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-inner > .material-icons-outlined {
+  font-size: 45px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.charts-card {
+  background-color:white;
+  margin-bottom: 20px;
+  padding: 25px;
+  box-sizing: border-box;
+  -webkit-column-break-inside: avoid;
+  border-radius: 5px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.chart-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* Medium <= 992px */
+
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+
+
+/* Small <= 768px */
+
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+}
+          
+
+
+
+</style>
+<body>
+ 
+   <nav class="navbar">
+    <div class="max-width">
+        <div class="logo"><img src="Logo.png"></img><a href="#">Auction <span>Hub</span></a></div>
+        <ul class="menu">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="market.html">Market place</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Help</a>
+              </li>
+             
+           </ul>
+    </div>
+</nav>
+
+     <div class="column right">
+       <!-- <div class="text"> -->
+    
+      <div class="box">
+        <h1>Won</h1>
+      </div>
+      <div class="box">
+        <h1>Lost</h1>
+      </div>
+      <div class="box">
+        <h1>Highest bid</h1>
+      </div>
+      <div class="box">
+        <h1>Lowest bid</h1>
+      </div>
+    <!-- </div> -->
+         
+     
+      </div>
+      <!-- <div class="charts">
+
+        <div class="charts-card">
+          <h2 class="chart-title">Products sold </h2>
+          <div id="bar-chart"></div>
+        </div>
+    
+        <div class="charts-card">
+          <h2 class="chart-title">Won & lost graph</h2>
+          <div id="area-chart"></div>
+        </div>
+    
+      </div>
+    </main>
+  
+    
+    </div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+   
+    <script src="scripts.js"></script>
+   
+  
+     -->
+</body>
+</html>

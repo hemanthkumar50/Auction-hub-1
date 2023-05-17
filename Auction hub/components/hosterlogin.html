@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background: rgb(14, 87, 83);
+}
+.kamesh{
+    border-radius: 30px;
+    box-shadow: 10px 20px 10px rgb(5, 80, 109);
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(18, 168, 206);
+    width: 400px;
+    height: 400px;
+    padding: 40px 30px;
+}
+.log,.name,.psw,.btns{
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 100%;
+    border-radius: 30px;
+    padding: 13px 10px;
+
+}
+.btns{
+    border-color: white;
+}
+.btns a{
+    color: aliceblue;
+    padding: 10px 24px;
+    background-color: rgb(25, 27, 27);
+    border-radius: 30px;
+  
+}
+.btns a:hover{
+    border-color: rgb(62, 221, 168);
+    background-color: rgb(230, 238, 235);
+    color: rgb(25, 27, 27);
+  
+}
+
+</style>
+
+<body>
+    <form class="kamesh" method="get">
+        <div class="log">
+            <label>Login form</label>
+        </div>
+       
+        <div class="name">
+            <!-- <label>Name</label> -->
+        <input type="text" placeholder="Hoster Name" maxlength="20" required>
+        </div>
+       <div class="psw">
+        <!-- <label>password</label> -->
+        <input type="password" placeholder="Password" maxlength="10" required>
+       </div>
+      
+        <btn class="btns">
+           <!-- <input type="submit" value="Host"></input>  -->
+            <a href="liveauction.html">Host</a>
+            
+        </btn>
+    </form>
+</body>
+</html>

@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction hub</title>
+    <link rel="stylesheet" href="../packages/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+   
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  
+    
+</head>
+<style>
+  
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+
+    }
+    body{
+        background: rgb(14, 87, 83);
+          
+    }
+    .max-width{
+        max-width: 1300px;
+        padding: 0 80px;
+        margin: auto;
+    }
+  
+    nav{
+        position: relative;
+        top:-35px;
+        line-height: 95px;
+        border-radius: 35px;
+        position: fixed;
+        width:100%;
+        background: rgb(24, 143, 151);
+        animation: nav 2s ease-in-out;
+        z-index: 100;
+    }
+
+/* @keyframes nav{
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+} */
+    .navbar .max-width{
+        position: relative;
+        top:20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar .logo a{
+        color:white;
+        font-size: 45px;
+        font-weight: 900;
+    }
+    .navbar .logo a:hover{
+        color:black;
+    }
+    .navbar .menu li a:hover{
+       background-color:rgb(14, 87, 83);
+    }
+    .navbar .menu li {
+        list-style:none;
+        display: inline-block;
+    }
+
+
+    .navbar .menu li a{
+        border-radius: 20px;
+        padding: 5px 7px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+    }
+  
+     .navbar .btns a{
+      border:2px solid rgb(231, 223, 223);
+      color: #fff;
+       position: relative;
+       left: 50px;
+       padding: 10px 20px;
+       font-size: 20px;
+       font-weight: 700;
+       background-color: black;
+       border-radius: 30px;
+      
+    }
+
+    .navbar .btns a:hover{
+      
+      border:2px solid black;
+       color: #130e0e;
+       background-color: rgb(213, 217, 221);
+     
+    }
+
+   .logo img{
+    position: relative;
+    right: 25px;
+    top:16px;
+    border-radius: 80%;
+    height: 57px;
+    width: 60px;
+   }
+
+   .logo span{  
+     font-size:45px;
+     font-weight: 900;
+   }
+.navbar .toggle-btn{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display:none ;
+}
+
+
+.down-bar{
+  display: none;
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  background:rgba(24, 142, 151, 0.582);
+  /* right: 2rem; */
+  top: 100px;
+}
+.menu-down li {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 30px;
+font-weight: 800;
+color: white;
+}
+.menu-down li a {
+  
+
+font-size: 30px;
+font-weight: 800;
+color: white;
+}
+
+@media (max-width:840px) {
+
+.menu{
+  display: none;
+}
+.navbar .toggle-btn{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+}
+
+
+.template img {
+   transform: rotateY(180deg);
+}
+.navbar .logo a{
+        color:white;
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .logo span{  
+     font-size:35px;
+     font-weight: 600;
+   }
+   
+   .logo img{
+    height: 47px;
+    width: 50px;
+   }
+   .navbar .toggle-btn{
+  position: relative;
+  left: 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* template styling */
+
+
+
+  .template{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+       
+        animation: template 2s ease-in-out;
+      
+    }
+
+/* @keyframes template{
+  0%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+} */
+
+  
+  
+
+
+       
+    
+.template img {
+ 
+   /* transform: rotateY(180deg); */
+
+    position: absolute;
+    top:100px;
+    border-radius: 30px;
+    border: 4px solid white;
+    width: 100%;
+    height: 550px;
+    align-items: center;
+    background-repeat: no-repeat;
+  
+    /* background: rgba(0, 0, 0, 0.808); */
+    /* background-image: url(h3.png);
+    background: cover; */
+}
+@keyframes animate{
+    10%{
+        background:url(1.jpg);
+        background-size :cover;
+        height: 90vh;
+        width: 70%;
+    } 
+    40%{
+        background:url(2.jpg);
+        background-size :cover;
+        height: 90vh;
+        width: 70%;
+    }
+   70%{
+        background:url(3.jpeg);
+        background-size :cover;
+        height: 90vh;
+        width: 70%;
+    }
+    90%{
+        background:url(4.jpeg);
+        background-size :cover;
+        height: 90vh;
+        width: 70%;
+    
+    }
+    110%{
+        background:url(6.jpg);
+        background-size :cover;
+        height: 90vh;
+        width: 70%;
+    } 
+    130%{
+        background:url(7.jpg);
+        background-size :cover;
+        height: 90vh;
+        width: 70%;
+    } 
+    160%{
+        background:url(5.jpg);
+        background-size :cover;
+        height: 90vh;
+        width: 70%;
+    } 
+    /* 140%{
+        background:url();
+        background-size :cover;
+        height: 60vh;
+        width: 90vh;
+    }  */
+}
+
+.template img:hover{
+  
+    border: 4px solid rgb(24, 143, 151);
+  
+}
+ .plate{
+  /* display: flex;
+  justify-content:end; */
+   width: 90%;
+    position: absolute;
+    top:230px;
+  
+   
+}
+.btn{
+  padding: 10px 5px;
+}
+.btn a{
+ position: relative;
+ top:30px;
+ border-radius: 20px;
+ border: 3px solid rgb(225, 235, 232);
+ padding: 5px 5px;
+ font-size: 35px;
+ background-color:rgb(11, 12, 12);
+ font-weight: 800; 
+ color: rgb(28, 202, 165);
+}
+ .btn a:hover{
+
+ border: 3px solid rgb(28, 202, 165);
+ background-color:rgb(198, 211, 208);
+ color: rgb(5, 5, 5);
+}
+.plate .name h1{
+ 
+ padding: 10px 5px;
+ font-size: 55px;
+ font-weight: 800; 
+ color: rgb(12, 224, 178);
+}
+.plate .name p{
+ 
+ padding: 10px 5px;
+ font-size: 20px;
+ font-weight: 800; 
+ color: rgb(12, 224, 178);
+}
+/* .plate .live{
+  display: flex;
+ justify-content: end;
+} */
+.plate .name h2 span{
+
+padding: 30px 5px;
+font-size: 65px;
+font-weight: 800; 
+color: rgb(226, 224, 212);
+}
+.plate .live h3{
+ /* position: relative;
+ top:30px; */
+ display: flex;
+ justify-content: center;
+ padding: 39px 5px;
+ font-size: 35px;
+ font-weight: 800; 
+ color: white;
+}
+
+ /* particiption styling */
+ 
+.sec{
+   
+    animation: sec 2s ease-in-out;
+}
+
+      
+    
+
+/* @keyframes sec{
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+} */
+
+.participate{
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    position: relative;
+    top: 690px;
+    display: flex;
+    justify-content: center;
+    /* right: -150px; */
+ }
+ .auction1{
+        display: flex;
+        justify-content: center;
+        
+    
+     
+       
+    }
+.auction1 .details{
+    position: absolute;
+    top:790px;
+    border-radius: 20px;
+    width: 80%;
+    height: 160px;
+    background:black;
+    align-items: center;
+}
+.details h1{
+ font-size: 25px;
+ font-weight: 500; 
+ position: relative;
+ top:10px;
+ color: white;
+ padding: 20px 20px;
+ 
+}
+.details h2{
+ padding: 20px 20px;
+ font-size: 25px;
+ font-weight: 800; 
+ color: white;
+}
+
+.details2{
+    position: absolute;
+    top:1040px;
+    border-radius: 20px;
+    width: 80%;
+    height: 160px;
+    background:black;
+    align-items: center;
+}
+
+
+
+.date h3{
+ display: flex;
+ align-items: flex-end;
+ justify-content: flex-end;
+ position: relative;
+ bottom: 50px;
+ padding: 2px 8px;
+ font-size: 20px;
+ font-weight: 800; 
+ color: white;
+}
+.date h2{
+ padding: 20px 20px;
+ font-size: 25px;
+ font-weight: 800; 
+ color: white;
+}
+.sold h3{
+ display: flex;
+ align-items: flex-end;
+ justify-content: flex-end;
+ padding: 0px 20px;
+ font-size: 20px;
+ font-weight: 800; 
+ color: white;   
+}
+.sold h2{
+ position: relative;
+ top:20px;
+ padding: 0px 20px;
+ font-size: 25px;
+ font-weight: 800; 
+ color: white;   
+}
+
+/* 2nd template */
+.date2 h3{
+ display: flex;
+ align-items: flex-end;
+ justify-content: flex-end;
+ position: relative;
+ bottom: 50px;
+ padding: 2px 8px;
+ font-size: 20px;
+ font-weight: 800; 
+ color: white;
+}
+.date2 h2{
+ padding: 20px 20px;
+ font-size: 25px;
+ font-weight: 800; 
+ color: white;
+}
+.sold2 h3{
+ display: flex;
+ align-items: flex-end;
+ justify-content: flex-end;
+ padding: 0px 20px;
+ font-size: 20px;
+ font-weight: 800; 
+ color: white;   
+}
+.sold2 h2{
+ position: relative;
+ top:20px;
+ padding: 0px 20px;
+ font-size: 25px;
+ font-weight: 800; 
+ color: white;   
+}
+
+.auctionpart{
+margin: 30px 2px;
+}
+
+
+.auctionpart h3{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding:10px 20px;
+ font-size: 20px;
+ font-weight: 900; 
+ color: rgb(22, 21, 21);
+}
+.auctionpart h4{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 10px 20px;
+ font-size: 18px;
+ font-weight: 500; 
+ color: white;
+}
+
+
+/* image */
+.image{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative;
+    top: 900px; */
+    margin: 20px;
+    padding: 30px 20px;
+ 
+}
+.image img{
+   
+   height: 350px;
+   width: 360px;
+   border: 4px solid white;
+   border-radius: 90%;
+}
+.image img:hover{
+    border: 4px solid rgb(24, 143, 151);
+}
+
+.slide-image{
+  
+    position: relative;
+    top: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  
+}
+.slide-image img{
+    border: 4px solid white;
+    margin: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    height: 320px;
+    width: 350px;
+}
+.slide-image img:hover{
+    border: 4px solid rgb(24, 143, 151);
+  
+}
+
+
+/* slide dot styling */
+.dotdiv{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+            
+
+            
+    
+ 
+    
+
+
+
+
+
+
+             /* user style */
+             
+          
+             .product{
+              position: relative;
+              top:1600px;
+             }
+             
+           
+            .product .title{
+             padding: 20px ;
+             color: white;
+             position: relative;
+             font-size: 60px;
+             font-weight: 600;
+             text-align: center;
+             margin:10px 0px;
+            
+            
+            }
+           .product .max-width{
+            position: relative;
+            top:40px;
+           }
+            
+            .product .product-content{ 
+            
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+            
+            }
+            .product .product-content .left .product-content{
+              border: 3px solid white;
+              border-radius:200px;
+              align-items: center;
+              margin: 15px 20px;
+              height: 59vh;
+              width: 59vh;
+              object-fit: cover;
+              animation: product-content 2s ease-in-out;
+            }
+        
+   
+       /* @keyframes product-content{
+            0%{
+           opacity: 0;
+           transform: translateX(100%);
+              }
+          } */
+            .product .product-content .left .product-content:hover{
+              border: 3px solid rgb(243, 12, 224);
+            }
+            
+            .product .product-content .right{
+             
+             color: white;
+             width:50%;
+             animation: right 2s ease-in-out;
+            }
+            /* @keyframes right{
+           0%{
+            opacity: 0;
+             transform: translateY(100%);
+           }
+            } */
+           
+            
+            .product .product-content .right h4 {
+              padding: 10px 0px;
+             border: 3px solid white;
+             background:black;
+             border-radius: 30px;
+          
+              
+            }
+           
+    
+            .product .product-content .right h4:hover {
+             border: 3px solid rgb(243, 8, 153);
+             background:rgb(51, 172, 202);
+             
+            
+           
+             
+            }
+            .product .product-content .right h4  p{
+             padding: 10px 25px;
+             font-size:27px;
+             color: rgb(218, 196, 196);
+             
+             
+            }
+            .product .product-content .right  a{
+               border-radius: 30px;
+               border: 2px solid white;
+               position: relative;
+               top:20px;
+               left: 10px;
+               padding: 10px 10px;
+               color: azure;
+               font-size: 20px;
+               font-weight: 900;
+               background-color:black;
+            }
+            /* .product .product-content .right a{
+             display:inline-block;
+             align-items: space-between;
+             padding: 5px 5px;
+             margin: 20px 20px;
+             background:rgb(24, 143, 151);
+             color: white;
+             font-weight: 400;
+             font-size: 25px;
+             border-radius: 6px;
+             border:2px solid rgb(233, 233, 243);
+             transition: all 0.3s ease;
+            } */
+            .product .product-content .right a:hover{
+             color:rgb(217, 217, 230);
+             background:rgb(3, 3, 3);
+            }
+            .product-content{
+             display: flex;
+             margin: 0px;
+             padding: 0px;
+            }
+            /* product responsive */
+             @media(max-width:1096px){
+             .product .product-content .right{
+                width: 100%;
+             }
+            }
+            @media(max-width:1096px){
+             .product .product-content .left .product-content{
+               width: 95%;
+               height: 90%;
+             }
+             .product .title{
+               
+              font-size: 30px;
+              font-weight: 600;   
+             }
+            } 
+            @media (max-width:417px){
+              .product .product-content .right a{
+                font-size: 15px;
+                font-weight: 300;
+              }
+              .product .max-width h2{
+                font-size: 40px;
+                font-weight: 500;
+               }   
+               .product .product-content .right .text{
+              
+                font-size:24px;
+                font-weight: 300;
+               }
+               .product .product-content .right .text span{
+                font-size: 28px;
+               }
+               .product .product-content .right p{
+                font-size:18px;
+                
+                
+               }
+            }
+            
+            @media (max-width:291px){
+              .product .title{
+               
+                font-size: 30px;
+                font-weight: 600;   
+               }
+            }
+            
+        
+
+/* slide sold and buyed product styling */
+.container {
+position: relative;
+top:1540px;
+display: flex;
+flex-wrap: wrap;
+max-width: 2120px;
+width: 100%;
+padding: 40px 0;
+}
+.pro h1 {
+position: relative;
+top:1560px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 40px;
+font-size: 45px;
+font-weight: 900;
+color:white;
+
+}
+.slide-container {
+margin: 0 30px;
+overflow: hidden;
+}
+.card {
+background: #fff;
+border-radius: 8px;
+}
+.card .image-box {
+
+height: 300px;
+}
+.card .image-box img {
+
+width: 100%;
+height: 100%;
+border-radius:20px;
+}
+.card .profile-details {
+display: flex;
+align-items: center;
+column-gap: 12px;
+padding: 15px;
+}
+.card .profile-details img {
+height: 40px;
+width: 40px;
+border-radius: 50%;
+}
+.profile-details .name {
+font-size: 15px;
+font-weight: 500;
+}
+.profile-details .job {
+font-size: 12px;
+font-weight: 500;
+color: #4d4d4d;
+}
+
+.swiper-navBtn {
+color: #000;
+height: 40px;
+width: 40px;
+background: #fff;
+border-radius: 50%;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+.swiper-navBtn {
+display: none;
+}
+} 
+           
+/* user product-slide */
+
+    .main{
+        position: relative;
+        top:1800px;
+        height: 100vh;
+        width: 100%;
+       
+    }
+    .wrapper,
+     .slide{
+        /* overflow: hidden; */
+        width:100%;
+        height: 100%;
+    }
+    /* .slide::before{
+        content:"";
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.39);
+        z-index:10;
+    } */
+    .slide img{
+       position: relative;
+       left:-20px;
+       border-radius: 80px;
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .slide .image-date{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        z-index: 200;
+    }
+     .image-date .text{
+        font-size: 20px;
+        font-weight: 900;
+        color:white;
+        
+    }
+
+
+ /* footer styling */
+                  footer{
+           width:100%;
+        position:relative;
+        top: 2000px;
+        background: rgb(24, 143, 151);
+        color: white;
+        border-top-left-radius:125px;
+        border-top-right-radius:125px;
+        line-height: 20px;
+        }
+
+.row{
+   
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+
+
+.row img{
+   
+    position: relative;
+    top:15px;
+    right: 10px;
+    border-radius: 80%;
+    height: 57px;
+    width: 60px;
+   }
+    .col{
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+    }
+   .col h1{
+    padding: 15px;
+     font-size:45px;
+     font-weight: 900;
+   }
+   .icons{
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+   }
+   .icons a img{
+    margin: 0px 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 80%;
+   }
+   .para{
+   
+    display: flex;
+    justify-content:center;
+   }
+  
+
+   /* market place-2 */
+   
+            .market .title{
+            
+           
+             color: white;
+             position: relative;
+             font-size: 60px;
+             font-weight: 600;
+             text-align: center;
+             margin:80px 0px;
+            
+            
+            }
+         
+            .market{
+              
+              position: relative;
+              top: 1400px;
+            }
+            
+            .market .product-content{ 
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+            
+            }
+            .market .product-content .left .product-content{
+              border: 3px solid white;
+              border-radius: 30px;
+              align-items: center;
+              margin: 15px 20px;
+              height: 49vh;
+              width: 65vh;
+              object-fit: cover;
+              
+            }
+            .market .product-content .left .product-content:hover{
+              border: 3px solid rgb(243, 12, 224);
+            }
+            
+            .market  .product-content .right{
+           
+             color: white;
+             width:50%;
+            }
+            .market  .product-content .right .text{
+             margin: 10px 0px;
+             
+             font-size:35px;
+             font-weight: 600;
+             color: blue;
+            }
+            /* .product .product-content .right .text span{
+                 border-radius: 30px;
+             color: red;
+            } */
+            
+            .market .product-content .right h4 {
+             border: 3px solid white;
+             background:rgb(24, 143, 151);
+             border-radius: 30px;
+              
+            }
+            .market  .product-content .right h4:hover {
+             border: 3px solid rgb(243, 8, 153);
+             background:rgb(3, 3, 3);
+             
+            
+           
+             
+            }
+            .market  .product-content .right h4  p{
+             padding: 10px 25px;
+             font-size:27px;
+             color: rgb(218, 196, 196);
+             
+             
+            }
+            .market  .product-content .right h4  p a{
+              position: relative;
+              top:50px;
+             
+            }
+            .market  .product-content .right a{
+             display:inline-block;
+             align-items: space-between;
+             padding: 5px 5px;
+             margin: 20px 20px;
+             background:rgb(24, 143, 151);
+             color: white;
+             font-weight: 400;
+             font-size: 25px;
+             border-radius: 6px;
+             border:2px solid rgb(233, 233, 243);
+             transition: all 0.3s ease;
+            }
+            .market  .product-content .right a:hover{
+             color:rgb(217, 217, 230);
+             background:rgb(3, 3, 3);
+            }
+            .product-content{
+             display: flex;
+             margin: 0px;
+             padding: 0px;
+            }
+            /* product responsive */
+             @media(max-width:1096px){
+              .market  .product-content .right{
+                width: 100%;
+             }
+            }
+            @media(max-width:1096px){
+              .market  .product-content .left .product-content{
+               width: 95%;
+               height: 90%;
+             }
+             .market  .title{
+               
+              font-size: 30px;
+              font-weight: 600;   
+             }
+            } 
+            @media (max-width:417px){
+              .market  .product-content .right a{
+                font-size: 15px;
+                font-weight: 300;
+              }
+              .market  .max-width h2{
+                font-size: 40px;
+                font-weight: 500;
+               }   
+               .market  .product-content .right .text{
+              
+                font-size:24px;
+                font-weight: 300;
+               }
+               .market .product-content .right .text span{
+                font-size: 28px;
+               }
+               .market  .product-content .right p{
+                font-size:18px;
+                
+                
+               }
+            }
+            
+            @media (max-width:291px){
+              .market  .title{
+               
+                font-size: 30px;
+                font-weight: 600;   
+               }
+            }
+            
+            
+            
+
+
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><img src="../images/logo.png"></img><a href="#">Auction <span>Hub</span></a></div>
+            
+                   <ul class="menu">
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="stats.html">Stats</a>
+                  </li>
+                  <li>
+                    <a href="productshowcase.html">Products</a>
+                  </li>
+                  <li>
+                    <a href="#">Help</a>
+                  </li>
+                  <btn class="btns">
+                    <a href="update.html">Update</a>
+                  </btn>
+                 
+               </ul>
+               <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+               </div>
+    
+        </div>
+        <div class="down-bar">
+          <ul class="menu-down">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="profile.html">Settings</a>
+              </li>
+              <li>
+                <a href="#">Help</a>
+              </li>
+             
+           </ul>
+        </div>
+        <script>
+          const toggleBtn = document.querySelector('.toggle-btn')
+          const toggleBtnIcon = document.querySelector('.toggle-btn i')
+          const downBar = document.querySelector('.down-bar')
+
+          toggleBtn.onclick = function() {
+            downBar.classList.toggle('open')
+            const isOpen = downBar.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+          }
+        </script>
+        
+    </nav>
+   
+
+
+  <div class="template">
+    <img class="myslides"  src="">
+    <img class="mySlides" src="https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg" >
+    <img class="mySlides" src="https://media.istockphoto.com/id/1209088835/photo/back-view-of-buyers-raising-hands-to-auctioneer-during-auction.jpg?s=612x612&w=0&k=20&c=OKZMX3No-OcsyCIMB2ibwKVoIx3M-fyor4MvCq2de80=" >
+    <img class="mySlides" src="../images/ham2.jpg" >
+    <img class="mySlides" src="../images/ham5.jpg" >
+   <!-- <img class="mySlides" src=""> -->
+   
+      <div class="plate">
+        <div class="name">
+          <h1>Online</h1>
+          <h2><span class="type">Auction Hub</span></h2>
+          <p>auction held over the internet and accessed by internet connected devices. Similar to in-person auctions, online auctions come in a variety of types, with different bidding and selling rules.</p>
+          <!-- <div class="btn">
+            <a href="update.html">Update</a>
+          </div> -->
+          <div class="live">
+            <h3>Live auction</h3>
+          </div>
+         
+        </div>
+         
+         
+
+      </div>
+
+    
+          <script> 
+             var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+          var typed = new Typed(".type", {
+            strings : ["Auction.","Auction.","welcome's.","Hemanth Kumar."],
+            typespeed:10,
+            backspeed:10,
+            loop:true
+          });
+          
+          
+          
+        </script>
+  </div>
+
+
+
+
+
+
+    <div class="sec">
+        <div class="participate">Auction participated</div>  
+
+        <div class="auction1">
+            <div class="details">
+                 <div class="date">
+                    <h2>Aucion 1</h2>
+                    <h3>Date and time</h3>
+                 </div>
+                 <div class="sold">
+                    <h2>Money spent</h2>
+                    <h3>Sold</h3>
+                 </div>
+               
+    
+            </div>
+           
+            <div class="details2">
+                <div class="date2">
+                   <h2>Aucion 1</h2>
+                   <h3>Date and time</h3>
+                </div>
+                <div class="sold2">
+                   <h2>Money spent</h2>
+                   <h3>Sold</h3>
+                </div>
+              <div class="auctionpart">
+                <h3>No Past Auction Participated </h3>
+                <h4>Explore Aution</h4>
+              </div>
+             
+           </div>
+           
+    
+    </div>
+    
+
+    <section class="market">
+      <div class="max-width"> 
+       <h2 class="title">Sell Product</h2>
+       <div class="product-content">
+         <div class="column left">
+           <img class="product-content" src="https://thumbs.dreamstime.com/b/cubes-word-sell-hand-turning-cube-answer-yes-no-cubes-word-sell-hand-turning-cube-171455926.jpg" alt="">
+         </div> 
+         <div class="column right">
+           <div class="text">
+              <!-- <a href="#">Profile</a>
+              <a href="">Timing</a></div> -->
+           <h4> <p>About this product :</p>
+            <p>You can buy this demand products in this page</p></h4>
+              <a href="sell.html">Sell</a>
+          
+           <script src= "script.js"></script>  
+          </div>
+        </div>
+      </div>
+      </div>
+      <script> var typed = new Typed(".side", {
+      strings : ["Coder.","Designer.","Cricketer.","Youtuber."],
+      typespeed:1800,
+      backspeed:1600,
+      loop:true
+      });
+      </script>
+      </section>
+
+      <section class="market">
+          <div class="max-width"> 
+           <h2 class="title">Host Auction</h2>
+           <div class="product-content">
+             <div class="column left">
+               <img class="product-content" src="https://i.pinimg.com/736x/93/a2/aa/93a2aa8955615737c2918db7a0621d90.jpg" alt="">
+             </div> 
+             <div class="column right">
+               <div class="text">
+                  <!-- <a href="#">Profile</a>
+                  <a href="">Timing</a></div> -->
+               <h4> <p>About this product :</p>
+                 <p>You can buy this demand products in this page</p></h4>
+                  <a href="hosterlogin.html">Host</a>
+              
+               <script src= "script.js"></script>  
+              </div>
+            </div>
+          </div>
+          </div>
+          </section>
+
+          <section class="market">
+              <div class="max-width"> 
+               <h2 class="title">Buy Products</h2>
+               <div class="product-content">
+                 <div class="column left">
+                   <img class="product-content" src="https://www.michaelpage.co.uk/sites/michaelpage.co.uk/files/legacy/Blog-Image_600x387_116183530_0.jpg" alt="">
+                 </div> 
+                 <div class="column right">
+                   <div class="text">
+                      <!-- <a href="#">Profile</a>
+                      <a href="">Timing</a></div> -->
+                      <h4>  <p>About this product :</p>
+                      <p>You can buy this demand products in this page</p></h4>
+                       
+                       
+                      <a href="products.html">Buy</a>
+                  
+                   <script src= "script.js"></script>  
+                  </div>
+                </div>
+              </div>
+              </div>
+              </section>
+            
+  
+</div>
+
+    
+   
+     <!-- <div class="productchange">
+      <h1>Available Products</h1>
+  </div>
+  <div class="center slider"></div> -->
+   
+  <div class="pro">
+    <h1>Products</h1>
+  </div>
+  <div class="container swiper">
+    <div class="slide-container">
+      <div class="card-wrapper swiper-wrapper">
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="https://www.team-bhp.com/forum/attachments/super-cars-imports-india/1622423d1490344188-money-no-bar-car-would-you-buy-import-india-9.jpg" alt="" />
+          </div>
+          <div class="profile-details">
+            <img src="https://images.unsplash.com/photo-1615172282427-9a57ef2d142e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZHVjYXRpfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="" />
+            <div class="name-job">
+              <h3 class="name">David Cardlos</h3>
+              <h4 class="job"></h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="https://m.media-amazon.com/images/I/41wyDXtmdlL.jpg" alt="" />
+          </div>
+          <div class="profile-details">
+            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmljeWNsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" />
+            <div class="name-job">
+              <h3 class="name">Siliana Ramis</h3>
+              <h4 class="job"></h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBISFRgVFRIYFRgaEhwcFRkaGhgYGBgUGBgcGhgYGBgcIS4lHB4sIRkYJjgmLC8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHjQsJCs0PTY2NDQxNDQ0NDQ0NDQ0NDQ0PTQ0MTQ0NDQ0NDQ0NDY0NDQ0NDQ0NDExNDQxNDQxNP/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcCAQj/xABIEAACAQIDBAYGBQgHCQAAAAABAgADEQQSIQUGMVETQWFxgZEHIjKhsbIUYnLB0SMzQlJ0gpKzJDRzwtLh8BUWQ0RTY4SU8f/EABoBAQADAQEBAAAAAAAAAAAAAAACAwQBBQb/xAAkEQEBAQACAgIDAAIDAAAAAAAAAQIDESExBBIyQVEicUJh8P/aAAwDAQACEQMRAD8A7FERAREQEREBERAREQEREBERAREQEREBERARI7au1KdAEs4WyFjfWwAJOncDKTgNrbbxKjEI2GpU39alRqK5Y0z7JZl4MRrpz8JKZt9I3WZ7dHiUKpv7VwgH0/AvRXNl6aky1qVyNCRoy310tLFsfezAYy3QYqm5I9gnK/8AA1j7pyyz27LL5ibiInHSIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICJHYjaqIcoBc9duHn+Amq+0qjcBkHdc+Z/CSmbUbqRNGa1XaFJOLg93rfCV+tVZvaYt3m/umu5kpj+uXa04fGo/st5gjWbMomKxj0kLIbG48Rylu2PiTVoU3PFkBPfwPwkdZ6dzrtuxESKTl3pALGpijqQMMw7ADh9dfEydw+ICU0A0ApqB3BRI7f4aYv9mb+RNKtirIv2F+Al3Heqy8/mPO9ATF0Wos1rkFWAvlZTcG3WOq3bOYYzdHEUzdCtUX0ynK3fZre4mXHEYpmbKOJOnfNR8RUU6qR4GbM8OeT2oxyax4np63GrbXGdVxdalky5UqIaqNocwyubgAAarznQ9jb14qnUSjj6SKHYIlekW6PpGNlWojaoToAeFzaULB7RII1lkqYg4nD1KTE2NNsvNWKmzAngQbHvElyfCmcdxs49/d1GJpbIxJq4ejUPF6COe90DH4zdnlrSIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAkTvRtA4XCYiuouyUGZR9a3q++0lpHbeoLUw7owzK4CsDwKswBB8DOz2VxTcPbOKfEMKlZ6gdMzZmJysHVRYcFBDtoNNBynU0qHhYgZTrzNibic82xsxdk4epVoCzs6qjEliCxIB9a/sjNYczree9wNsV26RKtQ1QLEMWLkZ0clSx5FR3ZjLJ/Fd/q8uZiYz2xmFjLEGtjEDqQRfUS4bvqFw9MDqX+8ZT8VUyozWvYX8pc9ii1BPsn5jKtrMN6IiVpudekAHLij1fRX8+hH4Sv4mp6i/YHwli9IHs4r9lqfyllVxJJRQAScosBqeA6pbn3FHLPCIcqc7NchRew0JuQOPIXmGotRHyq5uSyDU3y6XDDq0I8jC1Ar6kr9YcVPO3Xysec+9NTZmbKwLBhmFibGwBtzte/fPQ4vDJX0ioWzMoHrZSQLBmBOvuOvZLRg2KUXY9VNvPKbe+RFHDZi9jmHTC3LUMbDxJkhtOsEQURxZCz9iAHL5n5Z35fyPpxVu+Dw3k31/wC6dS3XH9Cwv7HS/lrJWRe7H9Swv7JS/lrJSeSsIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICae1vzTfu/MJuTT2r+ab935hOz25fSl7b2fRxNF6T3s5DXBsVZbWYX4H1RIbd7YQw3qKpC3uzMQWY6XJI01sB3DhxvamMxsZd1FXby5mNjDNMbNJOPFUAqQRcHQjnfS3vly2P8AmE+z95nP9tYo0qTOOIZfmEo+J30xxqC2IdFQ2VUJVQBrqBo3jeU8t6i7hx9r0/Q0+TW2bUdqVNnGV2pKXHJyoLDzvOTekXeTHYfGsiVmpIioaYU2DBluWI4NrmGvKV3XU7WZx3bO1h3/AB6mK4/1Wpyt+aW/bfh75VEIK2tmORbC9s1hqt7jXUHj+jNHGbzV8bTqtUsC2FqhsospK0it+y5W9p6rDMqj6o+Ev4vPlm5s2eGviaYerY/Vz9frZRe5HE8+282U2XdwoHG3hNjZ2y2cjSWB6aYVQ73LcUUe0SOHcO2atc+cZ7qrj+PveupGlisImDXO5v8AqLwZn6l/z6pColRmd31ZkJNuFiugHIAWFp4x+KqYmoHe2nsgcACf8h5SWAzIdOCN8J4fyfl659yfqPp/hfGzwYt/bp+6/wDUsL+yUv5ayVkPurUVsHhrMDbCUgbEGx6NdDykxNjxL7IiIcIiICIiAiIgIiICIiAiIgIiICIiAiIgeXYKCTwAue4Th2zN4qzbQYGoxSrUIZb6WUFhp2ZZ1rezHihhqjX1KFV72B+684Hu+98dSP8A3G+R5H/lFmfGK7GzTE7TyjXA7hAUsbKCT1AamaWR4ZpiJm1jcMaYU5SAVFydLvxItxFuHhNMmdjlae1qIqUih62T5hKxubuv9J2i4Zb0qDhn5MbAoviePYDLLtXEpTTM5IBdRccQb3vbs0lj3SxOEpKQtRc9Rizt+ix4ABuqwtobHXulPJ9bemji+2Z317W6Uf0m7sjGUOmQflaSkjm1Piy+HtDx5y8TBisRTprmdgq8Neu/VbrkLO4lLZe44Js3BhcBUc8egrjyzr90ntkbONTLp+iPhPW3q2GajjFwxvTRKtu9lYsR9XMSAe6W3d7CCnSV7a5BbyEtzqTPh2cd3rzHpMNTw6cAWt4DvlU2vULsSTcyy7SYte2sq2NFiZi59XT1+Dhmc9z20MJQu0n1w1kb7DfAyLwFs0tHR/k3/s2+UzHx4/yXb31npWvRBjGSqEJNqlI2H1lFx7gZ2OcB3PxfQVMLU6hbN3cG91530EHUajq7p6WL7/28bnz1Z/p9iIk1BERAREQEREBERAREQEREBERAREQEREDmvpX2hlC0weC3Pe1/uAnLt1mvjKP22+R5YfSRtMVcQ9jcXsO4aD3CRG4lAvigbaLTLHuuF+LAeMjm96XanWev+nVU0AHZJHYjgO3PJp5i/wB0iy0JVKG6mxmmzudMUvVSm3jmCtfgSLd/X7pCkz3Wru9szXtwmEmdzOp0W91C72hvo5IXNZhcddj1j3Tn9DaFRTdGItxGvvEvO8O0jScKwuhp6i9vWuDflcaiU6vh6bYgulVbEhrMCnHQqSCRf3d3Vl3ZddxsxNTMl9O1+jLadTE4FWqe0lRlB5oLFT7yPCUf0jbwVnxb4cXRKZC96sgJPjmPhLb6MK5NOohFsrg9lyLaSB9LOyy1VWRfWqUraaXZDbUnQC2XU8LRfSM/JSMFjyaGIRKfqtQqZnPIIzADxAlt3q3nNBUw6GxWkhcjmyggeRHnIDBUFTBV0zKzU6NUOVuQcwY3BIFwLhe+VvbeINSs7k8W07ur3WlvHmdeHdclzrymqO8lQG+c+cmKW11rjKxCt1N1E/W/Gc+DmbFDFFTxk7M68aizj+TrN7lXbZ+KK1cjaEHhL7T1pP8A2bfKZy2hiekVXHtpr2snWO8cR4zoa49UwdSqTouHZu8hDYeJsPGYtcP011+r6a9c+d57jl2ycQQqC/sgW7iJ+gd1cZ02Fpte5C5T3rp8LT830/UK/ZHwnZvRVtMVKb0idRZgPc33eUnm9aY9y3Mv8dCiIligiIgIiICIiAiIgIiICIiAiIgIiICRW8eP6CizD2m0X7z5fGSsrW/AHQA8mPvEjq9RLE71HA9t1M9Rje9zJ7cHEpTqMp9p0KD+NH/ue+V/aY9c982N2KhXFUhzc/I0jn3Fu/VdZJnkmeA0+EzawjGeSZ8JnwmBC70YHpaWZR66kW7VPEGUKlhTUcoPVcG1jz75fd5XZaasptlc36r5gLD3SjvtApU6TJqfa7TzmXks+3XTVxyzMvbtnoysuF6MgZ0aznrYcFJ52sR4Tmm9W28TisVVLMVppVdUW5yhFYqp7yBf94zovo1wjFDimJC1UXIvYD6x89PAznO99NlZ1b1XzksOq4JvOX07n8mjh67GhXVV9U0amdz15UY2H7wHlIXHU7HwHwli2UhXAupUhvo1c2Nrm4dgbceE0tqYS1j9UfCX8MnVkVct1b3VdKzwRNx6cwmnJWIytzY+JNNwe2TW8+06go/R1stIqG04uOoE8gRw7BK7h1sRJzbSZ8Kr9dNsp+w4/wAQH8UnJLPP6RurL1L7RuICkp/ZrfvyiWjcHaBoYhSL2LAEcweMqmFfN4KB7pNbFfJVVvrCYL7b8+cv0XExYdw6Kw4MgPmLzLLWUiIgIiICIiAiIgIiICIiAiIgIiICVH0iVLUFHNj8BLdKL6UHIpIOeb7pHXpPj/KONbQUZrxu6f6XR+23yNMeO4z7u8f6XR+23yNOY9xLk9V1am2k+kzHSOnjPRM2MYTPl55JnwmBpbZwwq0XQi/A+RnP0wxSuabWKh7a9Q67Tpbi4Ph8ZUsLgGr45lC5vymg53A0lHLF3DXYtybfQqAW1gjCw6rM2k5N6V0qvtB+OQU0C24eyCSeZuePICdq2Rs9MNSWkvBRqebEksfMmc/9KWy3J6UKSjKoLD9F1uBfvFtfCQvpPN/yc8weJY0qtrk/RqoLcAv5Nr25nq85P7Qwl1U2/QHwmls/DBdn1DbXoMRc/wAcs9SmMik/qL8BLeKTMV8ttvlQsThLdU0nw8umJwIbUDrN7ixBHEEdRkZV2d2S7rtV2r1GjrLJ9Fz4PELb/gsw709cfLMVPZ+vCWLAUB0Lgag03HmpE56dc6wFgl+ZkpgXAcHtkXhB+SQ9k2cM9iO+YNe27N8R+id3a/SYem31Lfwm33STlX3Ar58Nb9VyPMA/G8tEtz6U6/KkRE6iREQEREBERAREQEREBERAREQEqHpFwWfDq4F8jG/c3/yW+R231Bw7g8Mo+YTl9JZvVfnXHUrE6TX2DpjKP2z8jSxbboAMR2/61laOanUSqg9hww7bHUeOo8ZXm9aW7z3l1WnwE+kyJw28GFdQ3SqmmquQrDsN/umX/bWFP/MU/wCNfxmv7T+sX1v8b5M+Xmj/ALXw3/Xp/wAa/jM2FxVOqwWnUV2PBUIYnuAnftP6fW/x6xT5UJBPEcO+WTcPYQQNimHr1Ddb8QvAnx4TFsrYjVDapScC/FlKqBz9bUnul2o0VRVRRZVUKo5ACwle7KnjuMkxYrDpVRkdQyMpDA9YMyxIJuL7zbK+iCvh1uwFGoVPWQ6Oy+OtvCTNFRUpJY6FEIPgCJdtubHp1vXKZmC2IFrldefeZzM0dobPUp9EavQQno6hJpMtP9FXzixtwBB4ASzOpIhqW1MDDcb6ksSTw1Y3OkxNhAeqQS74Op1wansOJpD4G8yf7689nr/7Sf4pP75c+mks2ABBHC4t5zYrE5KjvlBZWZsoyqPUtoOrhK7V315YML/5NI38zInbe971KTU0pKmdSrHpEqMVPFVCcLi4uTp3zl3kmNK7gan5NRymzQF2GnXIzCuRf398mNm6sJjvtrz6dq9GyEYZiet/go/GW+VTcWsAhp8lDD4H4iWuW59Kt/kRETqJERAREQEREBERAREQEREBERASC3txGSjl/WPuA/EiTs5zvxtUEtY6DRe4dfiST5SOr4SxO6omNfpKrXOgOs1sZQVQQBNc4izE8+PjNPE465sT3Hn3yqztoljwaa63mMWFgB1QgLm1pad1t2WxLquXidSeAUcSZ2OIrY2wa2LqKiIWJPgB1kngBO47rbsUcAllAaoR6z/cOS/Gb2xdjUcIgWmuttWPtMe3kOySUszOlOtd+IRESSBERATyyAggi4IsQdQRyInqIHNt8dwFbNWwy68Wpj4pz+z5cpzCtQdTYqdPuM/TEgdt7rYXF3LLkf8AXWwY/a0sfj2yGs/xbnk/Vfnmob6WmJwLcJd96NyauGJaxdOpwDbub9U9hlMr4Vk4yHpPrvzH3DoOHOSD0ujsR1anx4SIWtlNz4CbrYrMLXvz74h4dL3M2nkZGJ04N9kixPhx8J1Ofn/dnHhWyk/6M7Tu9jxVpAE3ZQAeZX9FvLTvEszf0huftLxESSoiIgIiICIiAiIgIiICIiAiIgQ+8W0hRTKDZmHkvWfunHN5Mbnc8hESvXtdj8VSrV9ZqBS5iIdT2yMHcjr7LGdy3L2X0GHDMtnexPML+iPv8Yidyjr0scREmqIiICIiAiIgIiIHipTDAqwBBFiDqCD1ETjG+mwDh6jKAQh1Q8bqe3mOBiJHSfHaoGOwhXUazSSqRESMWVK7OrkEGdM3b22abKw10sw/WB4iIh39Oo0aquoZTdSLg9hmSIlij9kREOEREBERA//Z" alt="" />
+          </div>
+          <div class="profile-details">
+            <img src="https://cdn.shopify.com/s/files/1/0140/6461/5510/products/player_edition_ew_ton_copy_1200x1200.webp?v=1665062168" alt="" />
+            <div class="name-job">
+              <h3 class="name">Richard Bond</h3>
+              <h4 class="job"></h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/1/VH/RS/AV/7333457/16-1-1000x1000.jpg" alt="" />
+          </div>
+          <div class="profile-details">
+            <img src="data:image/jpeg;base64,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" alt="" />
+            <div class="name-job">
+              <h3 class="name">Priase</h3>
+              <h4 class="job"></h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="https://printbest.com/wp-content/uploads/2021/12/Use-text.png" alt="" />
+          </div>
+          <div class="profile-details">
+            <img src="https://m.media-amazon.com/images/I/81tzdBv+89L._SL1280_.jpg" alt="" />
+            <div class="name-job">
+              <h3 class="name">James Laze</h3>
+              <h4 class="job"></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+    <!-- second slide -->
+   
+  </div>
+  
+  <script src="../packages/swiper-bundle.min.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script>
+      var swiper = new Swiper(".slide-container", {
+slidesPerView: 4,
+spaceBetween: 20,
+sliderPerGroup: 4,
+loop: true,
+centerSlide: "true",
+fade: "true",
+grabCursor: "true",
+pagination: {
+  el: ".swiper-pagination",
+  clickable: true,
+  dynamicBullets: true,
+},
+navigation: {
+  nextEl: ".swiper-button-next",
+  prevEl: ".swiper-button-prev",
+},
+
+breakpoints: {
+  0: {
+    slidesPerView: 1,
+  },
+  520: {
+    slidesPerView: 2,
+  },
+  768: {
+    slidesPerView: 3,
+  },
+  1000: {
+    slidesPerView: 4,
+  },
+},
+});
+  </script>
+   
+
+   <section class="product">
+    <div class="max-width"> 
+     <h2 class="title">Auction User</h2>
+     <div class="product-content">
+       <div class="column left">
+         <img class="product-content" src="../images/Hem.jpeg" alt="">
+       </div> 
+       <div class="column right">
+       
+         <h4> <p>User name :</p>
+              <p>Batch no :</p>  
+             <p>About user :</p></h4>
+            <a href="#">More about you</a>
+        
+         <script src= "script.js"></script>  
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+     
+    <section class="main swiper mySwiper">
+      <div class="wrapper swiper-wrapper">
+       <div class="slide swiper-slide">
+           <img src="../images/1.jpg" alt=""  class="image">
+           <div class="image-date">
+               <span class="text">Sold from gokul</span>
+           </div>
+          
+       </div>
+       <div class="slide swiper-slide">
+           <img src="../images/2.jpg" alt=""  class="image">
+           <div class="image-date">
+               <span class="text">Sold from gokul</span>
+           </div>
+          
+       </div>
+       <div class="slide swiper-slide">
+           <img src="../images/3.jpeg" alt=""  class="image">
+           <div class="image-date">
+               <span class="text">Sold from gokul</span>
+           </div>
+          
+       </div>
+       <div class="slide swiper-slide">
+           <img src="../images/banner1.jpg" alt=""  class="image">
+           <div class="image-date">
+               <span class="text">Sold from gokul</span>
+           </div>
+          
+       </div>
+       <div class="slide swiper-slide">
+           <img src="../images/banner1.jpg" alt=""  class="image">
+           <div class="image-date">
+               <span class="text">Sold from gokul</span>
+           </div>
+          
+       </div>
+       <div class="slide swiper-slide">
+           <img src="../images/banner1.jpg" alt=""  class="image">
+           <div class="image-date">
+               <span class="text">Sold from gokul</span>
+           </div>
+          
+       </div>
+       
+       </div>
+       <div class="swiper-button-next"></div>
+       <div class="swiper-button-prev"></div>
+       <div class="swiper-pagination"></div>
+       </section>
+       <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+       <script>
+           var swiper = new Swiper(".mySwiper", {
+             slidesPerView: 1,
+             spaceBetween: 30,
+             loop: true,
+             pagination: {
+               el: ".swiper-pagination",
+               clickable: true,
+             },
+             navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+             },
+           });
+         </script>
+
+   
+
+
+    
+     <footer>
+        <div class="row">
+            <img src="../images/Logo.png"class=logo>
+        </div>
+          <div class="col">
+            <h1>Auction Hub</h1> 
+        </div> 
+        <div class="para">
+            <p>In this webite we can sell product , buy product and host auction</p>
+        </div>
+            <div class="icons">
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyME8fWJKPbExcsSUAapvmP9mudXJNRIaIzXP-dVnk073Kgp_rxkVA4N4ZowFuqZnKubs&usqp=CAU"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"></a>
+                <a href="#"><img src="https://w7.pngwing.com/pngs/963/811/png-transparent-youtube-logo-youtube-red-logo-computer-icons-youtube-television-angle-rectangle-thumbnail.png"></a>
+                <a href="#"><img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"></a>
+            </div>
+               
+    </footer>
+
+           
+    
+</body>
+</html>
